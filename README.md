@@ -22,7 +22,8 @@ kubectl apply -f ingress.yaml
 
 Apri il browser all'indirizzo http://localhost:8080/getName?name=tuoNome
 
-Crea il secondo cluster kind:
+Crea il secondo cluster kind, in cui il parametro è inviato da un altro endpoint invece che direttamente:
+
 ```
 cd interface
 kind create cluster --config config-interface.yaml
