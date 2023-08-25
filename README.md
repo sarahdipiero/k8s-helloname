@@ -44,7 +44,8 @@ kubectl apply -f ingress-interface.yaml
 
 Apri il browser all'indirizzo http://localhost:8081
 
-<img width="1510" alt="helloname" src="https://github.com/sarahdipiero/k8s-helloname/assets/82499117/cc257f9e-8984-44a3-a573-22b105e5b845">
+
+<img width="1510" alt="helloname" src="https://github.com/sarahdipiero/k8s-helloname/assets/82499117/24d87e0a-28c4-459b-9e0e-ba393ce3090c">
 
 
 Inserisci il tuo nome e premi il pulsante.
