@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: helloname-service
+  labels:
+    app: helloname
+spec:
+  type: ClusterIP
+  selector:
+    app: helloname
+  ports:
+    - port: 80
+      targetPort: 8080

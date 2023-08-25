@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>HELLONAME</title>
+    <script>
+        const SERVER_URL = 'http://localhost:8080/';
+        function sendName(form){
+    
+            if(!form.name.value.trim()){
+                alert('Please, enter a name');
+                return;
+            }
+            const name = form.name.value.trim();
+             let serverUrl = SERVER_URL + 'getName';
+             if(name){
+                 serverUrl += '?name=' + name;
+             }
+             window.open(serverUrl, "_self");
+        }
+
+    </script>
+</head>
+<body>
+    <div align="center">
+        <h1>HELLO NAME</h1>
+        <form onsubmit="sendName(this); return false;">
+            <div class="form-group">
+                <label for="Name">NAME</label>
+                <input class="form-control" name="name" id="name">
+            </div>
+            <div class="form-group text-center">
+                <button class="btn btn-success">SEND</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloname-deployment
+  labels:
+    app: helloname
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: helloname
+  template:
+    metadata:
+      labels:
+        app: helloname
+    spec:
+      containers:
+        - name: helloname
+          imagePullPolicy: IfNotPresent
+          image: freskessa/helloname:1

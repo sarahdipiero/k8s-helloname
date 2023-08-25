@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: helloname-ingress
+  labels:
+    app: helloname
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /getName
+            pathType: Prefix
+            backend:
+              service:
+                name: helloname-service
+                port:
+                  number: 80
